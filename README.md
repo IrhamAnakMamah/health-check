@@ -72,7 +72,6 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini di komputer lokal And
     ```bash
     pip install -r requirements.txt
     ```
-    *(Catatan: Jika file `requirements.txt` belum ada, install manual dengan: `pip install streamlit pandas numpy scikit-learn joblib`)*
 
 4.  **Jalankan Aplikasi**
     ```bash
