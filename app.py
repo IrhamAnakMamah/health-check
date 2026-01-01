@@ -45,11 +45,11 @@ st.markdown("""
 def load_assets():
     try:
         # Load file yang baru diexport (Random Forest & OHE)
-        model = joblib.load('rf_model.joblib')
-        scaler = joblib.load('scaler.joblib')
-        model_cols = joblib.load('model_columns.joblib')
-        le_dict = joblib.load('label_encoder.joblib')
-        ohe_gender = joblib.load('ohe_gender.joblib') # Load OHE Gender
+        model = joblib.load('model/rf_model.joblib')
+        scaler = joblib.load('model/scaler.joblib')
+        model_cols = joblib.load('model/model_columns.joblib')
+        le_dict = joblib.load('model/label_encoder.joblib')
+        ohe_gender = joblib.load('model/ohe_gender.joblib') # Load OHE Gender
         return model, scaler, model_cols, le_dict, ohe_gender
     except FileNotFoundError as e:
         st.error(f"⚠️ File asset tidak lengkap: {e}. Pastikan rf_model.joblib, ohe_gender.joblib, dll ada di folder yang sama.")
@@ -58,7 +58,7 @@ def load_assets():
 model, scaler, model_cols, le_dict, ohe_gender = load_assets()
 
 # --- 3. HEADER ---
-st.title("⚖️ HealthCheck AI")
+st.title("⚖️ HealthCheck")
 st.markdown("### Deteksi Dini Risiko Obesitas & Saran Kesehatan")
 st.markdown("---")
 
